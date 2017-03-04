@@ -1,0 +1,25 @@
+{
+  "name": "Owl",
+  "version": "1.0.0",
+  "description": "![alt tag](http://animals.sandiegozoo.org/sites/default/files/2016-10/owl_southern_white_faced.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tareq89/Owl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tareq89/Owl/issues"
+  },
+  "homepage": "https://github.com/tareq89/Owl#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "hapi": "^16.1.0",
+    "hoek": "^4.1.0"
+  }
+}

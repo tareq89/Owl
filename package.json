@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tareq89/Owl#readme",
   "dependencies": {
+    "boom": "^4.2.0",
     "dotenv": "^4.0.0",
     "hapi": "^16.1.0",
     "hapi-mongodb": "^6.2.1",

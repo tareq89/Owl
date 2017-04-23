@@ -10,6 +10,8 @@ Tracker.schema = Joi.object().keys({
 	CreateTime: Joi.date().iso(),
 	Point: Joi.object().keys({
 		type: Joi.string(),
-		coordinates: Joi.array().ordered(Joi.number().required,Joi.number().required).length(2)
+		coordinates: Joi.array().ordered(Joi.number()).length(2)
 	})
-})
+});
+
+module.exports = Tracker;

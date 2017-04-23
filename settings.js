@@ -4,7 +4,7 @@ module.exports = {
 	port: process.env.PORT || 3000,
 	env: process.env.ENV || 'development',
 	development: {        
-        url: 'mongodb://localhost:27017/ShadowCat',
+        url: "mongodb://localhost:27017/ShadowCat",
         decorate: true
     }
 }

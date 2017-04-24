@@ -1,6 +1,6 @@
 'use strict';
-const Boom = require('boom');
-const Tracker = require('../model/tracker')
+const Tracker = require('../model/tracker');
+const Joi = require('joi');
 
 module.exports = {
 
@@ -24,15 +24,24 @@ module.exports = {
 
 
     Post: (request, reply) => {
-        const tracker = request.payload;
-        console.log(tracker);
+        const tracker = request.payload;       
         Tracker.update(tracker, (err, response)=>{
             if (err) {
-                reply(err);
+                return reply(err);
             } else {
-                reply(response)
+                reply(response);
             }
-        });        
+        });
+    },
+
+    GetAll: (request, reply) => {
+        Tracker.getAll((err, response) => {
+            if (err) {
+                return reply(err);
+            } else {
+                reply(response);
+            }
+        })
     }
 
 }

@@ -1,6 +1,6 @@
 'use strict';
 const Boom = require('boom');
-
+const Tracker = require('../model/tracker')
 
 module.exports = {
 
@@ -20,6 +20,19 @@ module.exports = {
 
                 reply(result);
             });
-	}
+	},
+
+
+    Post: (request, reply) => {
+        const tracker = request.payload;
+        console.log(tracker);
+        Tracker.update(tracker, (err, response)=>{
+            if (err) {
+                reply(err);
+            } else {
+                reply(response)
+            }
+        });        
+    }
 
 }

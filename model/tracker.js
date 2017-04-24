@@ -2,7 +2,20 @@
 const Joi = require('joi');
 const MongoModels = require('mongo-models');
 
-class Tracker extends MongoModels {}
+class Tracker extends MongoModels {
+	static update(tracker, callback){		
+		this.updateOne({TrackerId: tracker.TrackerId}, tracker, { upsert: true }, (err, docs)=> {
+			if (err) {
+				callback();
+				return;
+			} else {
+				callback(null, docs[0]);
+			}
+		});
+	}
+}
+
+Tracker.collection = 'Ping';
 
 Tracker.schema = Joi.object().keys({
 	TrackerId: Joi.string(),
